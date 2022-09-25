@@ -1,0 +1,43 @@
+//Reverse a number
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for(int i=0;i<t;i++){
+        
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int rev_a  = 0,rev_b = 0,remainder = 0;
+            while(a != 0){
+            
+                remainder = a%10;
+                rev_a =rev_a*10+remainder;
+                a = a/10;
+            }
+            remainder = 0;
+            while(b!=0){
+            
+                remainder = b%10;
+                rev_b=rev_b*10+remainder;
+                b = b/10;
+            }
+            int sum = rev_a+rev_b;
+            System.out.println(sum);
+            sum = 0;
+        }
+            
+    }
+}
+
+//inputs = 3 27 1 88 12 21 5
+
+//output = 73 109 17
